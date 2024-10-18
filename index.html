@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loem theankou-ITE Event Management System</title>
+</head>
+
+<body>
+    <h1>Canvas Drawing</h1>
+    <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;"></canvas>
+
+    <script>
+        window.onload = function () {
+            // Get the canvas element by its ID
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+
+            // Draw a rectangle
+            ctx.fillStyle = "lightblue"; // Rectangle color
+            ctx.fillRect(50, 50, 200, 100); // (x, y, width, height)
+
+            // Draw a circle
+            ctx.beginPath();
+            ctx.arc(300, 150, 50, 0, 2 * Math.PI); // (x, y, radius, startAngle, endAngle)
+            ctx.fillStyle = "orange"; // Circle color
+            ctx.fill();
+            ctx.stroke(); // Draw the outline of the circle
+        };
+    </script>
+</body>
+
+</html>
